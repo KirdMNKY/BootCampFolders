@@ -1,0 +1,7 @@
+var phrase = "Sriracha goes great on ";
+
+var items = ["toast", "tacos", "pancakes", "waffles", "navels", "eggs", "cheese"];
+
+for(var i = 0; i < items.length; i++){
+	console.log(phrase + items[i] + ".");
+}

@@ -1,0 +1,38 @@
+.container {
+    margin: 0 auto;
+    width: 600px;
+   /* margin-left: 150px;
+   margin-right: 150px; */
+}
+
+.box {
+    padding: 40px;
+    text-align: center;
+}
+
+.box1 {
+    background: #eee;
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 40px;
+    width: 100px;
+}
+
+.box2 {
+    background: #eee;
+    position: relative;
+    height: 80px;
+    top: 50%;
+    left: 0%;
+    width: 85%;
+}
+
+.box3 {
+    background: #999;
+    position: absolute;
+    top:45%;
+    left:50%;
+    height: 8px;
+    width: 45%;
+}

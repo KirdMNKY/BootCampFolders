@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+  </head>
+  <body>
+
+      <div class="container">
+          <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+              <div class="jumbotron">
+                <h1>Car Adventures!</h1>
+                <h2>Type "h" to honk, "d" to drive to work, "w" to drive around the world, or "t" to get a tuneup. </h2>
+                <h2>See Console for car stats.</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+
+    <script>
+
+      var myCar = {
+        make: "Nissan",
+        model: "Altima",
+        color: "Navy",
+        mileage: 98000,
+        isWorking: true,
+
+        driveToWork: function() {
+
+        alert("Old Mileage: " + this.mileage);
+
+        this.mileage = this.mileage + 8;
+
+        alert("New mileage: " + this.mileage);
+        },
+
+        driveAroundWorld: function() {
+
+        alert("Old Mileage: " + this.mileage);
+
+        this.mileage = this.mileage + 24000;
+
+        alert("New Mileage: " + this.mileage);
+        alert("Car needs a tuneup!");
+
+        this.isWorking = false;
+        },
+
+        getTuneUp: function() {
+        alert("Car is ready to go!");
+        this.isWorking = true;
+        },
+
+        honk: function() {
+        alert("Honk! Honk!");
+        },
+
+        paintJob: function(newColor) {
+          console.log("Old color: " + this.color);
+          this.color = newColor;
+          console.log("New color: " + this.color);
+        },
+
+        status: function() {
+          console.log("Make: " + this.make);
+          console.log("Model: " + this.model);
+          console.log("Color: " + this.color);
+          console.log("Mileage: " + this.mileage);
+          console.log("Is Working: " + this.isWorking);
+          console.log("-----------------------------");
+        },
+        
+        action: function(userKey) {
+
+            var choices = ["h", "t", "d", "w"];
+            
+            if (choices.indexOf(userKey) >= 0){
+              if(userKey === "h") {
+                this.honk();
+                this.status();
+              }
+              else if (userKey === "t") {
+                this.getTuneUp();
+                this.status();
+              }
+              else if (userKey === "d") {
+                this.driveToWork();
+                this.status();
+              }
+              else if (userKey === "w") {
+                this.driveAroundWorld();
+                this.status();
+              }
+            }
+          }
+      };
+
+
+
+      var car = {
+        make: "Honda",
+        model: "Fit",
+        color: "Blue Raspberry",
+        mileage: 3000,
+        isWorking: true,
+
+        driveToWork: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 8;
+
+          alert("New mileage: " + this.mileage);
+        },
+
+        driveAroundWorld: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 24000;
+
+          alert("New Mileage: " + this.mileage);
+          alert("Car needs a tuneup!");
+
+          this.isWorking = false;
+        },
+
+        getTuneUp: function() {
+          alert("Car is ready to go!");
+          this.isWorking = true;
+        },
+
+        honk: function() {
+          alert("Honk! Honk!");
+        },
+
+        status: function() {
+          console.log("Make: " + this.make);
+          console.log("Model: " + this.model);
+          console.log("Color: " + this.color);
+          console.log("Mileage: " + this.mileage);
+          console.log("Is Working: " + this.isWorking);
+          console.log("-----------------------------");
+        },
+
+        action: function(userKey) {
+
+        var choices = ["h", "t", "d", "w"];
+
+          if (choices.indexOf(userKey) >= 0){
+            if(userKey === "h") {
+              this.honk();
+              this.status();
+            }
+            else if (userKey === "t") {
+              this.getTuneUp();
+              this.status();
+            }
+            else if (userKey === "d") {
+              this.driveToWork();
+              this.status();
+            }
+            else if (userKey === "w") {
+              this.driveAroundWorld();
+              this.status();
+            }
+          }
+        }
+      };
+
+      document.onkeyup = function(event) {
+        
+        var userKey = event.key;
+        myCar.action(userKey);
+        //car.action(userKey);
+      }
+ 
+    </script>
+    
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sushi Prompt - Unsolved</title>
+  </head>
+
+  <style>
+    .blue {
+      background: blue;
+    }
+
+    .red{
+      background: red;
+    }
+  </style>
+  <body style="background-image: url(https://static.vecteezy.com/system/resources/previews/000/154/323/large_2x/sushi-icon-set-vector.jpg);">
+
+    <script type="text/javascript">
+
+    // Write code here!
+    var likesSushi = confirm("Do you like Sushi?");
+    var favSushi = prompt("What is your favorite?");
+
+    document.write(likesSushi);
+    if(likesSushi == false)
+      document.write("<div class=\"red\">So you don't like Sushi...</div>");
+    else
+      document.write("<div class=\"blue\">We both like Sushi!!!</div>");
+
+    document.write("Your favorite is: " + favSushi + ".");
+
+    </script>
+
+  </body>
+</html>

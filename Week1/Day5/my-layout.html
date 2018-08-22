@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <style>
+        .outline {
+            border: 2px solid black;
+        }
+
+        .innerContainer {
+            margin-top: 20px;
+        }
+
+        .myNavbar {
+            position: relative;
+            float: right;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- nav bar here -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Nav Header -->
+            <a class="navbar-brand" href="#">Michael Soto</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="myNavbar">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            </div><!-- End of Nav Links -->
+        </div>
+    </nav>
+    
+    <div class="container innerContainer">
+        <div class="row">
+            <div class="col-md-8">          
+                    <h1>About Me</h1>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <!-- image 150x150 -->
+                            <img src="http://placeimg.com/150/150/any" alt="Thumbnail" class="img-thumbnail">
+                        </div><!-- End of Col 1 -->
+                        <div class="col-md-9">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed risus in urna volutpat finibus. Vestibulum elementum tellus ut diam mollis, eu rutrum dolor malesuada. Suspendisse sed mauris porttitor, porttitor elit sed, fermentum lectus. Aliquam nec accumsan leo, et lobortis urna. Morbi vitae tincidunt mi. Morbi accumsan imperdiet nulla sit amet lacinia. Praesent dignissim scelerisque orci, vel iaculis nunc semper maximus. Sed sit amet purus vitae velit vestibulum posuere nec in tellus. Pellentesque lobortis interdum velit, sed fringilla est scelerisque sed. Pellentesque quis ipsum sodales, faucibus tortor eu, imperdiet nisi. Donec lacinia auctor ultricies. 
+
+
+                            </p>
+                        </div> <!-- End of col 2 -->
+                    </div><!-- End of Inner Row -->
+                </div><!-- End of Inner Col 1-->
+            <div class="col-md 4">
+                <!-- sidebar -->
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        Sidebar
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Sidebar Content</li>
+                    </ul>
+                </div>
+            </div><!-- End of 2nd Col -->
+        </div><!-- End of Main Row -->
+
+        
+    </div>
+</body>
+</html>

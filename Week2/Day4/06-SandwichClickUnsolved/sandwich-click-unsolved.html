@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger Clicked</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <h1>Click to Eat Sandwich</h1>
+  <h3 id="pbj">Peanut Butter Jelly</h3>
+  <h3 id="grilledcheese">Grilled Cheese</h3>
+  <h3 id="roastbeef">Roast Beef</h3>
+  <div id="image-div">  </div>
+
+  <script type="text/javascript">
+
+    // This document.ready isn't necessary in this example... but is needed in cases where the HTML is complex.
+    // This code makes sure that the JavaScript doesn't get run until the HTML is finished loading
+    // It's useful to become familiar with now.
+
+    $(document).ready(function() {
+
+      // VARIABLES
+      // ====================================================================
+      // Here we create variables for tracking the number of sandwiches eaten
+      // ...
+      var numPBJ = 0;
+      var numGC = 0;
+      var numRB = 0;
+
+      var Counter = $("<div>");
+      var Display = $("<div>");
+      Display.attr("id", "display");
+      
+      // ...
+
+      // FUNCTIONS
+      // ====================================================================
+      // Here we create various on "click" functions which capture the clicks
+      // Inside each click event is the code to create an alert, update the counter, then show the updated count.
+      // ...
+
+      $("#pbj").on("click", function() {
+        alert("Try something else you man-child!");
+        numPBJ++;
+        Counter.text("PBJs Eaten: " + numPBJ);
+        alert("You've eaten " + numPBJ + " sandwiches.");
+        // $("#display").text(Counter);
+        $("#image-div").html('<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Peanut-Butter-Jelly-Sandwich.png/1920px-Peanut-Butter-Jelly-Sandwich.png">')
+      })
+
+      $("#grilledcheese").on("click", function() {
+        alert("A man need PRROOTTIIEEEEEEN");
+        numGC++;
+        Counter.text("PBJs Eaten: " + numGC);
+        // $("#display").text(Counter);
+      })
+      $("#roastbeef").on("click", function() {
+        alert("Now we're talking, broski!");
+        numRB++;
+        Counter.text("PBJs Eaten: " + numRB);
+        // $("#display").text(Counter);
+      })
+      // ...
+
+    });
+
+</script>
+
+</body>
+
+</html>

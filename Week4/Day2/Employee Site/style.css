@@ -1,0 +1,14 @@
+.jumbotron {
+    text-align: center;
+}
+h1 {
+    padding:10px;
+}
+
+.row {
+    border: 2px solid lightgray;
+}
+
+#submitButton {
+    margin-bottom: 10px;
+}

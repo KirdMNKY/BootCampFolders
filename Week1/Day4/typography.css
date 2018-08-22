@@ -1,0 +1,60 @@
+body {
+    font-family: 'Gaegu', cursive;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 1.5em;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-family: 'Chela One', cursive;
+    color: cornflowerblue;
+}
+
+.hi {
+    font-family: 'Pacifico', cursive;
+
+}
+
+h2 {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: bisque;
+}
+
+a {
+    padding: 15px;
+    font-size: 20px;
+    background: yellow;
+}
+
+a:hover {
+    background: gray;
+    -o-transition:.1s;
+    -ms-transition:1s;
+    -moz-transition:1s;
+    -webkit-transition:1s;
+    transition: color 1 ease-out, background 1s ease-in;
+}
+
+a:focus {
+    background: orange;
+    -o-transition:.1s;
+    -ms-transition:1s;
+    -moz-transition:1s;
+    -webkit-transition:1s;
+    transition: color 1 ease-out, background 1s ease-in;
+}
+
+a:active {
+    background: red;
+}
+
+/* a:visited {
+    background: green;
+} */
+
+p::first-letter {
+    font-size: 56px;
+    color: red;
+    letter-spacing: 10px;
+}

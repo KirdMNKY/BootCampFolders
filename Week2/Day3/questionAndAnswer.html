@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+    <h1>Star Wars Trivia!</h1>
+    <div id="question"></div>
+    <div id="score">0</div>
+    <!-- <audio controls scr="honk.wav">This is some audio</audio> -->
+
+
+
+    <script type="text/javascript">
+        var score = 0;
+        var questions = [
+            {
+            q: "Emperor Palpatine's first name is Sheev.",
+            a: "t",
+            },
+            {
+            q: "Luke's first lightsaber was green.",
+            a: "f",  
+            },
+            {
+            q: "Boba Fett was Jango Fett's son.",
+            a: "f",
+            },
+            {
+            q: "Yoda was 900 years old when he died.",
+            a: "t",
+            },
+            {
+            q: "Obi-Wan Kenobi trained Darth Vader.",
+            a: "t",
+            },
+            {
+            q: "Han Solo shot first.",
+            a: "t",
+            },
+            {
+            q: "BB-8 is related to R2-D2.",
+            a: "f",
+            },
+            {
+            q: "Lando Calrissian loves capes.",
+            a: "t",
+            },
+            {
+            q: "In Sabaac, you should always let the wookiee win.",
+            a: "t",
+            },
+            {
+            q: "Kylo Ren is a big baby.",
+            a: "t",
+            }
+        ];
+
+        var score = 0;
+        var questionIndex = 0;
+        var questionEl = document.getElementById("question");
+        questionEl.textContent = questions[0].q;
+        var scoreEle = document.getElementById("score");
+        scoreEle.textContent = score;
+        document.onkeyup = function(e) {
+            if(e.key === "h"){
+                sound.play();
+                }
+                else if(e.key === "s"){
+                    sound.pause();
+                }
+            
+                var response = e.key;
+                if(response === questions[questionIndex].a) {
+                    alert("Correct");
+                    score++;
+                    scoreEle.textContent = score;
+                }
+                else {
+                    alert("Wrong");
+                    var sound = new Audio();
+                    sound.src = "honk.wav";
+                    document.onkeyup = function(e){
+
+                }
+                
+                if(questionIndex < questions.length) {
+                    questionIndex++;
+                    questionEl.textContent = questions[questionIndex].q;
+                    
+                }
+                else {
+                    alert("Game Over");   
+                }
+            }
+        }
+        
+            // questions.forEach(askQuestion);
+
+            // function askQuestion(value, index, arr) {
+            //     var correct = 0;
+            //     var wrong = 0;
+            //     var response = confirm(arr[index].q);
+            //     if(response === arr[index].a && response === "t") {
+            //         correct++;
+            //         score++;
+            //         console.log(arr[index].a);
+            //         console.log(score);
+            //         console.log("----------------------");
+            //     }
+            //     else{// if(response === arr[index].a && response === "f") {
+            //         wrong++;
+            //         score--;
+            //         console.log(arr[index].a);
+            //         console.log(score);
+            //         console.log("----------------------")
+            //     }
+            // }
+
+    </script>
+</body>
+</html>

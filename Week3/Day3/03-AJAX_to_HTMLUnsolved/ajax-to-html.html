@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Favorite Movies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h2>Basic Table</h2>
+    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Movie Name</th>
+          <th scope="col">Year</th>
+          <th scope="col">Actors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Insert movie rows here -->
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // The below code fills in the first row of the table
+    var movie = "Mr. Nobody";
+    var movie2 = "the+room";
+    var movie3 = "star+wars";
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+    var queryURL2 = "https://www.omdbapi.com/?t=" + movie2 + "&y=&plot=short&apikey=trilogy";
+    var queryURL3 = "https://www.omdbapi.com/?t=" + movie3 + "&y=&plot=short&apikey=trilogy";
+    var queryList = [queryURL, queryURL2, queryURL3];
+    
+    function makeTableRow(data){
+      // Obtain a reference to the tbody element in the DOM
+      var body = $("tbody");
+      // Create and save a reference to new empty table row
+      var row = $("<tr>");
+      // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
+      var titleCol = $("<td>").text(data.Title);
+      var yearCol = $("<td>").text(data.Year);
+      var actorsCol = $("<td>").text(data.Actors);
+      // Append the td elements to the new table row
+      row.append(titleCol);
+      row.append(yearCol);
+      row.append(actorsCol);
+      // Append the table row to the tbody element
+      $("tbody").append(row);
+    }
+
+    function getMovie(data){
+      $.ajax({
+          url: queryList[i],
+          method: "GET"
+        }).then(function(data) {
+          makeTableRow(data);
+      }); 
+
+    }
+
+    //My Solution
+
+    // for(var i = 0; i < queryList.length; i++){
+    //     $.ajax({
+    //       url: queryList[i],
+    //       method: "GET"
+    //     }).then(function(response) {
+    //       $("tbody").append("<tr><td>" + response.Title + "</td><td>" + response.Year + "</td><td>" + response.Actors + "</td></tr>");
+
+    //     });
+
+        // BONUS: Once complete, try to make your code as DRY as possible through the use of functions
+      // }
+  </script>
+</body>
+
+</html>

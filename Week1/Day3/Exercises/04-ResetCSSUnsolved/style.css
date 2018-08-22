@@ -1,0 +1,21 @@
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+ol {
+    list-style: square;
+}
+
+ul {
+    list-style: disc;
+}
+
+li {
+    margin-left: 20px;
+}

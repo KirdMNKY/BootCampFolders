@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Content!</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+</head>
+<style>
+  .drink {
+    color: blue;
+    padding: 10px;
+    border-width: 10px;
+    border: red;
+  }
+</style>
+<body>
+
+  <h1>Drink Selection!</h1>
+  <hr>
+
+  <!-- Here we create a generic drink-options div -->
+  <div id="drink-options"></div>
+  <h1 id="click-me">Hello</h1>
+  <script type="text/javascript">
+
+    // Array holds all of the drinks available
+    var drinkList = [
+      "Coffee: $5",
+      "Espresso: $7",
+      "Cappuccino: $6",
+      "Latte: $4",
+      "Tea: $3",
+      "Ice Coffee: $6",
+      "Ice Espresso: $8",
+      "Ice Latte: $6",
+      "Ice Tea: $4"
+    ];
+//JQuery Solution
+var drinkOptionsEl = $("#drink-options");
+for (var i = 0; i < drinkList.length; i++) {
+  var drink = drinkList[i];
+  var newDiv = $("<div>");
+  newDiv.text(drink);
+  newDiv.attr("class", "drink");
+  newDiv.append(newDiv);
+}
+
+//JQuery for each
+// $.each(drinkList, function(index, drink) {
+//   //console.log(index, item);
+//   drinkOptionsEl.append("<div class='drink'>" + drink + "</div>");
+// })
+
+$("#click-me").on("click", function() {
+ 		alert("surprise!");
+	})
+
+
+//My Attempt JQuery
+// var drinkOptionsEl = $("#drink-options");
+//     for(var i = 0; i < drinkList.length; i++) {
+//       var newDiv = $("div"); //I forgot the < >
+//       var drink = drinkList[i];
+//       newDiv.text(drink);
+//       newDiv.attr("class", "drink");
+//       drinkOptionsEl.append(newDiv);
+//       debugger;
+//     }
+
+
+//Solution javaScript
+    // var drinkOptionsEl = document.getElementById("drink-options");
+
+    // for(var i = 0; i < drinkList.length; i++) {
+    //   var newDiv = document.createElement("div");
+    //   var drink = drinkList[i];
+    //   newDiv.textContent = drink;
+    //   newDiv.setAttribute("class", "drink");
+    //   drinkOptionsEl.appendChild(newDiv);
+    // }
+
+//My Attempt
+    // var myDiv = document.getElementById("drink-options");
+    // var drink = document.createElement("div");
+
+    // for(var i = 0; i < drinkList.length; i++) {
+    //   drink = drinkList[i];
+    //   myDiv.appendChild(drink);
+    //   console.log(drink);
+    // }
+
+
+    
+    
+    // 1. Create code that "grabs" the div with the matching id (#drink-options);
+    // ...
+
+
+    // ...
+
+
+    // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.
+    // HINT: You will need to use each of the following methods: createElement, textContent, appendChild
+    // ...
+
+
+    // ...
+
+  </script>
+
+</body>
+</html>

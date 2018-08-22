@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    padding: 20px;
+    color: white;
+    background: #6495ed;
+    text-align: center;
+    height: 200px;
+}
+#movie-viewer {
+    box-shadow: inset 0 0 10px #000000;
+    background-color: gray;
+    height: clac(100% - 200px);
+    width:100%;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.image-holder {
+    height: 100%;
+    position: relative;
+}
+
+img {
+    height: 100%;
+}
+
+.imgHolder .movie-info{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    left: 0;
+    top: 0;
+    color: white;
+}
+
+.imgHolder:hover .movie-info {
+    display: block;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Events!</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+  </head>
+  <body>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+          <div class="jumbotron">
+            <h2>You just typed <span id="user-choice"><strong>...Nothing.</strong></span></h2>
+            <h2>Computer Chose:  <span id="comp-choice"><strong>...Nothing.</strong></span></h2>
+            <h2>Ties:  <span id="ties"><strong>...None.</strong></span></h2>
+            <h2>Wins:  <span id="wins"><strong>...None.</strong></span></h2>
+            <h2>Losses:  <span id="losses"><strong>...None.</strong></span></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- We have to put this at the end of our document to ensure the user-text
+         span exists when we try to access it. -->
+    <script type="text/javascript">
+      // Let's start by grabbing a reference to the <span> below.
+      var userChoice = document.getElementById("user-choice");
+      var compChoice = document.getElementById("comp-choice");
+      var showTies = document.getElementById("ties");
+      var showWins = document.getElementById("wins");
+      var showLosses = document.getElementById("losses");
+
+
+      var ties = 0;
+      var wins = 0;
+      var losses = 0;
+      // Next, we give JavaScript a function to execute when onkeyup event fires.
+      document.onkeyup = function(event) {
+        
+        var userKey = event.key;
+        var choices = ["r", "s", "p"];
+        
+        if (userKey === "r" || userKey === "s" || userKey === "p"){
+          userChoice.textContent = event.key;
+          var compResult = choices[parseInt(Math.random()*choices.length)];
+          console.log(compResult);
+          compChoice.textContent = compResult;
+
+          if(userKey === compResult){
+            ties++;
+            showTies.textContent = ties;
+          }
+          else if (userKey === "r" && compResult === "p" || userKey === "s" && compResult === "r" || userKey === "p" && compResult === "s"){
+            losses++;
+            showLosses.textContent = losses;
+          }
+          else {
+            wins++;
+            showWins.textContent = wins;
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
