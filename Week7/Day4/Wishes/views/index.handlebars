@@ -1,0 +1,13 @@
+<h1>
+    This is where my wishes go:
+</h1>
+{{#each wishes}}
+<h1>
+    {{this.wish}}
+</h1>
+{{/each}}
+
+<form action="/" method="POST">
+    <textarea name="wish"></textarea>
+    <input type="submit">
+</form>
